@@ -1,0 +1,66 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="titulo-acima">Principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ul class="navbar-nav bg-sucesso sidebar sidebar-dark" id="accordionSidebar">
+
+      <li class="nav-item flex text-center active">
+        <a color="light" class="nav-link active text-center" href="principal">
+          <ion-icon name="home-outline"></ion-icon> <span class="espacamento" color="light">Home</span>
+        </a>
+      </li>
+
+
+      <li class="nav-item flex text-center">
+        <a color="light" class="nav-link text-center" href="turmas">
+          <ion-icon name="people-outline"></ion-icon> <span class="espacamento" color="light">Turmas</span>
+        </a>
+      </li>
+
+      <li class="nav-item flex text-center">
+        <a color="light" class="nav-link text-center" href="registros">
+          <ion-icon name="receipt-outline"></ion-icon> <span class="espacamento" color="light">Registrar</span>
+        </a>
+      </li>
+
+      <li class="nav-item flex text-center">
+        <a color="light" class="nav-link text-center" href="conferir">
+          <ion-icon name="server-outline"></ion-icon> <span class="espacamento" color="light">Conferir</span>
+        </a>
+      </li>
+
+      <li class="nav-icon flex text-center"> 
+        <a color="danger" class="nav-link text-center" href="home">
+          <ion-icon name="log-out-outline"></ion-icon> <span class="espacamento" color="danger">Sair</span>
+        </a>
+      </li>
+
+    </ul>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons class="botao" slot="start">
+        <ion-menu-button>
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-menu-button>
+      </ion-buttons>
+      <ion-title  class="titulo-acima">Principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="conteudo fundo ion-padding">
+   <div class="fundo">
+    <div class="logo">
+      <div class="conteudo2">
+        <p class="super-titulo">Bem vindo, <span class="maiusculo">{{ nomeSalvo }}</span> !!!</p>
+      </div>
+    </div>
+   </div>
+  </ion-content>
+</div>

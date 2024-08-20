@@ -1,0 +1,66 @@
+
+.card-img {
+  width: 221px;
+  height: 166px;
+}
+
+.conteudo2 {
+  padding: 3rem !important;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: #fff;
+  position: absolute;
+}
+
+.custom-inputs {
+  text-align: center;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  border: 1px solid #d1d3e2;
+  border-radius: 35em;
+  margin-top: 10px;
+  color: #3a3b45;
+}
+
+.button-native::after{
+  background-color: #13855c !important;
+}
+
+.botao-login {
+  width: 100%;
+  margin-top: 20px;
+  padding: 8px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.custom-styles h1 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+.custom-styles h1,
+.custom-styles h1 {
+  font-size: 2.5rem;
+}
+
+.img-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo {
+  background-image: linear-gradient(to right, #1cc88a 10%, #13855c 100%);
+  height: 105vh;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.danger {
+  background-color: rgb(245, 2, 2);
+}

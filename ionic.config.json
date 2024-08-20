@@ -1,0 +1,7 @@
+{
+  "name": "AplicativoEE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

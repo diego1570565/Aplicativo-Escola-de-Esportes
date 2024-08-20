@@ -1,0 +1,123 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="titulo-acima">Registrar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ul class="navbar-nav bg-sucesso sidebar sidebar-dark" id="accordionSidebar">
+
+      <li class="nav-item flex text-center ">
+        <a color="light" class="nav-link  text-center" href="principal">
+          <ion-icon name="home-outline"></ion-icon> <span class="espacamento" color="light">Home</span>
+        </a>
+      </li>
+
+      <li class="nav-item flex text-center">
+        <a color="light" class="nav-link text-center" href="turmas">
+          <ion-icon name="people-outline"></ion-icon> <span class="espacamento" color="light">Turmas</span>
+        </a>
+      </li>
+
+      <li class="nav-item flex text-center active">
+        <a color="light" class="nav-link active text-center" href="registros">
+          <ion-icon name="receipt-outline"></ion-icon> <span class="espacamento" color="light">Registrar</span>
+        </a>
+      </li>
+
+      <li class="nav-item flex text-center">
+        <a color="light" class="nav-link text-center" href="conferir">
+          <ion-icon name="server-outline"></ion-icon> <span class="espacamento" color="light">Conferir</span>
+        </a>
+      </li>
+
+
+     
+
+      <li class="nav-icon flex text-center">
+        <a color="danger" class="nav-link text-center" href="home">
+          <ion-icon name="log-out-outline"></ion-icon> <span class="espacamento" color="danger">Sair</span>
+        </a>
+      </li>
+
+    </ul>
+  </ion-content>
+</ion-menu>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="botao" slot="start">
+      <ion-menu-button>
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title class="titulo-acima">Registrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="bg-dark">
+  <ion-progress-bar *ngIf="isLoading" type="indeterminate"></ion-progress-bar>
+  <ion-toolbar class="bg-dark">
+    <ion-segment class="bg-dark" value="Registros" (ionChange)="alternarVisualizacao($event.detail.value)">
+      <ion-segment-button class="bg-dark" value="Registros">
+        <ion-label>Dados</ion-label>
+      </ion-segment-button>
+      <ion-segment-button class="bg-dark" value="Registrar" [disabled]="isRegistrarDisabled">
+        <ion-label>Registrar</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</div>
+
+<ion-content *ngIf="mostrarRegistros" class="conteudo fundo ion-padding" id="main-content">
+  <div class="fundo">
+    <div class="conteudo2">
+      <div class="div-centro">
+        <label for="dia">Selecione o dia</label>
+        <input class="inputs" type="date" id="dia" name="dia" [(ngModel)]="data" (change)="onDateChange($event)"><br>
+
+        <label for="turma">Selecione a turma</label>
+        <select class="inputs" id="turmaSelect" name="turma" [(ngModel)]="selectedTurma" (change)="onTurmaChange()"
+          [disabled]="!filteredTurmas.length">
+          <option *ngFor="let turma of filteredTurmas" [value]="turma">{{ turma }}</option>
+        </select><br>
+
+        <label for="horario">Horario oficial Multiclubes</label>
+        <select class="inputs" id="horarioSelect" name="horario" [(ngModel)]="selectedHorario"
+          [disabled]=true>
+          <option *ngFor="let horario of availableHorarios" [value]="horario" >{{ horario }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+
+<ion-content *ngIf="!mostrarRegistros" class="conteudo fundo ion-padding" id="main-content">
+  <div class="fundo-alunos">
+    <div class="conteudo-alunos">
+      <ion-list class="lista-de-alunos">
+        <form>
+          <ion-item class="item-lista-alunos-completo" *ngFor="let aluno of alunos">
+            <div class="item-alunos-lista">
+              <ion-label class="alunos">{{ aluno['Nome do Aluno'] }}</ion-label>
+              <ion-checkbox class="checkbox" [name]="aluno['Nome do Aluno']" [id]="aluno['Nome do Aluno']"
+                [(ngModel)]="aluno.checked"></ion-checkbox>
+            </div>
+          </ion-item>
+       
+          <div class="div-btn">
+            <ion-button type="button" (click)="salvar()" class="botao-registrar">
+              Registrar
+            </ion-button>
+          </div>
+
+         
+        </form>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
+
+

@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+ion-header,
+ion-toolbar {
+    background-image: linear-gradient(to right, #1cc88a 10%, #13855c 100%);
+    --color: black;
+}
+
+ion-title {
+    font-size: 1.2rem;
+}
+
+ion-content {
+    background-image: linear-gradient(to right, #1cc88a 10%, #13855c 100%);
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav li {
+    margin-bottom: 1rem;
+    min-height: 70px;
+}
+
+.navbar-nav a {
+    display: block;
+    color: #adb5bd;
+    text-decoration: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a.active {
+    background-image: linear-gradient(to right, #1cc88a 10%, #13855c 100%);
+    color: #ffffff;
+    padding: 20px;
+}
+
+.navbar-nav a i {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.sidebar-brand img {
+    height: 50px;
+    width: 75px;
+}
+
+.sidebar-brand .sidebar-brand-text {
+    color: #ffffff;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+
+.sidebar-divider {
+    border-top: 1px solid #6c757d;
+    margin: 1rem 0;
+}
+
+.sidebar {
+    height: 100%;
+    background-color: #6c757d;
+    overflow-y: auto;
+    color: #fff;
+}
+
+.titulo-acima {
+    background-color: #003300;
+    height: 100%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.botao {
+    background-color: #003300;
+    color: #fff;
+    padding: 7px;
+    margin-left: -7px !important;
+}
+
+.text-center {
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #ffffff !important;
+    vertical-align: middle;
+
+}
+
+.nav-link {
+    padding: 30px;
+}
+
+.conteudo2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    height: 100%;
+    color: black;
+    opacity: 0.9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.div-centro {
+    padding: 30px;
+    width: 70%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;}
+
+.inputs {
+    padding: 7px;
+    width: 80%;
+    border-radius: 10px;
+    margin: 18px;
+}
+
+.titulo-nav {
+    text-align: center;
+    width: 100%;
+    background-color: #28a745 !important;
+    color: #fff;
+}
+
+.conteudo_alunos {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.botao-registrar {
+    width: 90%;
+    margin: 5%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    color: #fff;
+}
+
+.espacamento {
+    margin: 15px;
+}
+
+.super-titulo {
+    padding-top: 7xp;
+    color: white;
+    text-align: center;
+}
+
+.lista-de-alunos {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.alunos {
+    width: 100%;
+    margin: 18px;
+    font-size: smaller;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: end;
+}
+
+.fundo {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-image: url('../../assets/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    overflow-y: auto;
+    color: #fff;
+}
+
+.fundo_alunos {
+    min-height: 100%;
+    width: 100vw;
+    background-image: url('../../assets/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-y: hidden;
+    color: #fff;
+}
+
+.item-alunos-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+.item-lista-alunos-completo {
+    width: 95%;
+}
+.bg-dark{
+    background-color: #23272b;
+    color: #fff;
+}
+
+.div-btn{
+    height: 35vh;
+}

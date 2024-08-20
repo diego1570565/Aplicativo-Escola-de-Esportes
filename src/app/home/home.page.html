@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true">
+
+  <div class="conteudo">
+
+    <ion-card class="card">
+      <div class="conteudo2">
+        <div class="img-card">
+          <img class="card-img" alt="Silhouette of mountains" src="assets/logo.png" />
+
+        </div>
+        <ion-card-header class="titulo">
+
+          <ion-card-title class="fonte-titulo">
+            <h1 style="text-transform: uppercase; font-size: 1.5rem; text-align: center;" class="h4 custom-styles text-gray-900 mb-4">
+               Escola de Esportes</h1>
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+        
+            <ion-input style="  padding: 10px;" class="custom-inputs" type="text" [(ngModel)]="nome"
+              placeholder="Digite seu Nome..."></ion-input>
+            <ion-input class="custom-inputs" type="password" [(ngModel)]="senha"
+              placeholder="Digite sua Senha..."></ion-input>
+       
+              
+          <ion-grid>
+            <ion-row>
+          
+              <ion-col class="espaco"><ion-button class="botao-login"
+                  (click)="login()"><strong>Entrar</strong></ion-button>
+                </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+
+</ion-content>

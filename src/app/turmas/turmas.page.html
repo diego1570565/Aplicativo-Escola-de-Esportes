@@ -1,0 +1,90 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="titulo-acima">Turmas</ion-title>
+    </ion-toolbar>
+
+  </ion-header>
+
+
+  <ion-content>
+    <ul class="navbar-nav bg-sucesso sidebar sidebar-dark" id="accordionSidebar">
+
+      <li class="nav-item flex text-center ">
+        <a color="light" class="nav-link  text-center" href="principal">
+          <ion-icon name="home-outline"></ion-icon> <span class="espacamento" color="light">Home</span>
+        </a>
+      </li>
+
+      <li class="nav-item flex text-center active">
+        <a color="light" class="nav-link text-center active" href="turmas">
+          <ion-icon name="people-outline"></ion-icon> <span class="espacamento" color="light">Turmas</span>
+        </a>
+      </li>
+
+
+
+      <li class="nav-item flex text-center">
+        <a color="light" class="nav-link text-center" href="registros">
+          <ion-icon name="receipt-outline"></ion-icon> <span class="espacamento" color="light">Registrar</span>
+        </a>
+      </li>
+
+      <li class="nav-item flex text-center">
+        <a color="light" class="nav-link text-center" href="conferir">
+          <ion-icon name="server-outline"></ion-icon> <span class="espacamento" color="light">Conferir</span>
+        </a>
+      </li>
+
+      <li class="nav-icon flex text-center">
+        <a color="danger" class="nav-link text-center" href="home">
+          <ion-icon name="log-out-outline"></ion-icon> <span class="espacamento" color="danger">Sair</span>
+        </a>
+      </li>
+
+    </ul>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons class="botao" slot="start">
+        <ion-menu-button>
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-menu-button>
+      </ion-buttons>
+      <ion-title class="titulo-acima">Turmas</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-searchbar placeholder="Aluno..." (ionInput)="logSearchContent($event)"></ion-searchbar>
+    </ion-toolbar>
+    <ion-progress-bar *ngIf="isLoading" type="indeterminate" (click)="logProgressBarContent()"></ion-progress-bar>
+  </ion-header>
+  <ion-content class="conteudo fundo ion-padding">
+    <div class="turmas-container">
+      <ion-list class="turmas-list">
+        <ion-item style="display: flex; flex-direction: column;" *ngFor="let turma of turmas">
+          <div style="display: flex; flex-direction: column;">
+            <ion-label class="item_lista_cima" (click)="selectDisciplina(turma)">
+              <h2 class="nome_selecionado">{{ turma.Disciplina }}</h2>
+              <ion-icon
+                [name]="selectedDisciplina?.Disciplina === turma.Disciplina ? 'chevron-up-outline' : 'chevron-down-outline'"
+                slot="end"></ion-icon>
+            </ion-label>
+
+            <div *ngIf="selectedDisciplina?.Disciplina === turma.Disciplina" class="details-container">
+              <div style="display: flex; flex-direction: column;">
+                <ion-list class="alunos-list">
+                  <ion-item *ngFor="let aluno of turma.Details">
+                    <p class="item-lista-nomes"><strong>Aluno:</strong> {{ aluno['Nome do Aluno'] }}</p>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</div>
